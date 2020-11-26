@@ -1,0 +1,42 @@
+.newsletter {
+  @include flexLayout;
+  @include sectionSpacing;
+
+  background-color: color(lightGray);
+  text-align: center;
+
+  &-content {
+    h3 {
+      @include textStyles;
+      font-size: size(xl);
+    }
+
+    p {
+      @include textStyles;
+      font-size: size(md);
+      margin: 1.5rem 0;
+    }
+
+    .email-input {
+      padding: 1rem;
+      width: 70%;
+      outline: none;
+      border: 0.1rem solid color(black);
+    }
+
+    .submit-btn {
+      padding: 1rem;
+      width: 20%;
+      outline: none;
+      border: 0.1rem solid color(black);
+      background-color: color(black);
+      color: color(white);
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: lighten(color(black), 25%);
+      }
+    }
+  }
+}

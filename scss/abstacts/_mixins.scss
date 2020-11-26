@@ -1,0 +1,40 @@
+@mixin sectionSpacing() {
+  padding: 5rem 2rem;
+}
+
+@mixin flexLayout() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin textStyles {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+@mixin response($breakpoint) {
+  @if ($breakpoint == lg) {
+    @media (max-width: 750px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == md) {
+    @media (max-width: 650px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == sm) {
+    @media (max-width: 450px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == xs) {
+    @media (max-width: 350px) {
+      @content;
+    }
+  }
+}
